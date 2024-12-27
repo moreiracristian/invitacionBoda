@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliana & Cristian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: 'Playfair Display', 'Raleway';
+            background-color: #b4b4b4;
+            color: #3a5199;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 0;
+            color: #b4b4b4;
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            overflow: hidden;
+        }
+
+        header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen sin distorsión */
+        }
+
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+
+        .section {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 2rem;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-family: 'Raleway', serif;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: #ffffff;
+            background: #3a5199;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 2.5rem;
+        }
+
+        .button:hover {
+            background: #2f2e33;
+        }
+
+        .buttonR {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            color: #3a5199;
+            background: #b4b4b4;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 2.5rem;
+        }
+
+        .buttonR:hover {
+            background: #b4b4b4;
+        }
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 0 0 5rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 2rem 10rem 2rem;
+            background: #3a5199;
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-family: 'Raleway', serif;
+        }
+
+        /* Imagen superpuesta */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        }
+
+        .overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3.3rem;
+            }
+
+            .section h2 {
+                font-size: 3.3rem;
+            }
+
+            .section p {
+                font-size: 1.8rem;
+        }
+
+            .button {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="portada.png" alt="Portada de la boda">
+    </header>
+
+    <section class="section">
+        <h2>CEREMONIA<br>RELIGIOSA Y CIVIL</h2>
+        <p>
+            Fecha: 05 de Julio de 2025 <br>
+            Hora: 18:30 hs <br>
+            Lugar: Parroquia San Francisco Javier <br>
+            Dirección: Colon 428, Resistencia, Chaco <br>
+        </p>
+        <a class="button" href="https://maps.app.goo.gl/SGz8resAJJ1nyFPx5" target="_blank">¿Cómo llego?</a>
+    </section>
+
+    <section class="section">
+        <h2>FIESTA</h2>
+        <p>
+            Fecha: 05 de Julio de 2025 <br>
+            Hora: 21:00 hs <br>
+            Lugar: Salon a confirmar <br>
+            Dirección: A confirmar, Resistencia, Chaco <br>
+        </p>
+        <a class="button" href="https://maps.app.goo.gl/cfGyEkQjbutCgWUt5" target="_blank">¿Cómo llego?</a>
+    </section>
+
+    <section class="section">
+        <h2>CONFIRMAR ASISTENCIA</h2>
+        <p>Si te llegó esta invitación es porque queremos compartir nuestro día más importante con vos,<br>por eso es necesario que confirmes tu asistencia llenando el siguiente formulario. Si por algún motivo no vas a poder estar, por favor avisanos hasta el 03 de Marzo de 2025 para saber si contamos con vos</p>
+        <a class="button" href="https://forms.gle/ejemploFormulario" target="_blank">Confirmo</a>
+    </section>
+
+    <section class="section">
+        <h2>FRASE</h2>
+        <p>“El amor podría ser coincidir, decidir, crecer y disfrutar con un si cada día"</p>
+    </section>
+
+    <section class="section">
+        <h2>FALTA POCO</h2>
+        <div id="countdown"></div>
+    </section>
+
+    <footer class="footer">
+        <h2>REGALOS</h2>
+        <p>¡Tu presencia es nuestro mejor regalo! 
+            <br>
+            También podes ayudarnos con nuestra luna de miel realizando una transferencia al siguiente alias <br> o el día de la boda habrá una urna con sobres si queres hacerlo en efectivo</p>
+            <a class="buttonR" onclick="showImage()">Datos bancarios</button>
+            <div class="overlay" id="imageOverlay">
+                <button class="close-btn" onclick="hideImage()">&times;</button>
+                <img src="datosbancarios.png" alt="Detalles del regalo">
+            </div>
+    </footer>
+
+    <script>
+        const weddingDate = new Date('2025-07-05T18:30:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `
+                <span>${days} días</span>
+                <span>${hours} horas</span>
+                <span>${minutes} minutos</span>
+                <span>${seconds} segundos</span>
+            `;
+
+            if (difference < 0) {
+                document.getElementById('countdown').innerHTML = "¡Es hoy!";
+            }
+        }
+
+        function showImage() {
+            const overlay = document.getElementById('imageOverlay');
+            overlay.classList.add('active');
+        }
+
+        function hideImage() {
+            const overlay = document.getElementById('imageOverlay');
+            overlay.classList.remove('active');
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
