@@ -6,8 +6,18 @@
     <title>Eliana & Cristian</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
             text-align: center;
             font-family: 'Playfair Display', 'Raleway';
             background-color: #b4b4b4;
@@ -15,35 +25,25 @@
             line-height: 1.6;
         }
 
-        header {
+        .banner-section {
             text-align: center;
+            max-width: 100%;
+            max-height: 100vh; /* Ocupa toda la altura de la pantalla */
+            margin: 0;
+        }
+
+        .banner-image {
+            display: none; /* Ocultar imágenes por defecto */
+            width: 100%;
+        }
+
+        header {
+            margin: 0;
             padding: 0;
             color: #b4b4b4;
             position: relative;
-            width: 100%;
-            height: 100vh; /* Ocupa toda la altura de la pantalla */
             overflow: hidden;
         }
-
-        header img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ajusta la imagen sin distorsión */
-        }
-
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
 
         .section {
             padding: 2rem 1rem;
@@ -120,24 +120,26 @@
         .overlay {
             position: fixed;
             top: 0;
+            right: 0;
+            bottom: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            max-width: 100%;
+            max-height: 90vh; /* Ocupa toda la altura de la pantalla */
+            background: rgba(180, 180, 180, 0.8);
             display: flex;
             justify-content: center;
             align-items: center;
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.3s ease, visibility 0.3s ease;
-            z-index: 1000;
+            z-index: 100;
         }
 
         .overlay img {
             max-width: 90%;
-            max-height: 90%;
+            height: 70vh;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(58, 81, 153, 0.9);
         }
 
         .overlay.active {
@@ -145,18 +147,115 @@
             opacity: 1;
         }
 
-        .overlay .close-btn {
+        .overlay.close-btn {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2rem;
-            color: white;
+            top: 10px;
+            right: 10px;
+            font-size: 2.5rem;
+            color: #3a5199;
             cursor: pointer;
-            background: none;
+            background: #3a5199;
             border: none;
+            padding: 10px 15px; /* Añade espacio alrededor del icono */
+            border-radius: 50%; /* Botón redondeado */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+            transition: transform 0.2s, background-color 0.2s; /* Animación */
+        }
+
+        .overlay .close-btn:hover {
+            background: #b4b4b4; /* Cambia el color al pasar el cursor */
+            transform: scale(2.1); /* Agranda el botón ligeramente */
+        }
+
+
+        /**************/
+        /***CARRUSEL***/
+        /**************/
+
+        .carousel-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .carousel {
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .faq-section {
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: left;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #3a5199;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h3 {
+            color: #3a5199;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            display: none;
+            margin: 0.5rem 0 0;
+            color: #333;
         }
 
         @media (max-width: 768px) {
+
+            .banner-image.smartphone {
+                display: block;
+            }
+
             header h1 {
                 font-size: 3.3rem;
             }
@@ -167,21 +266,28 @@
 
             .section p {
                 font-size: 1.8rem;
-        }
+            }
 
             .button {
                 font-size: 2rem;
             }
         }
+
+        @media (min-width: 769px) {
+            .banner-image.notebook {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="portada.png" alt="Portada de la boda">
+    <header class="banner-section">
+        <img src="banner_smarphone/1.png" alt="Portada para smartphone" class="banner-image smartphone">
+        <img src="banner_notebook/1.png" alt="Portada para notebook" class="banner-image notebook">
     </header>
 
     <section class="section">
-        <h2>CEREMONIA<br>RELIGIOSA Y CIVIL</h2>
+        <h2><br>IGLESIA Y CIVIL</h2>
         <p>
             Fecha: 05 de Julio de 2025 <br>
             Hora: 18:30 hs <br>
@@ -195,7 +301,7 @@
         <h2>FIESTA</h2>
         <p>
             Fecha: 05 de Julio de 2025 <br>
-            Hora: 21:00 hs <br>
+            Hora: 21:30 hs <br>
             Lugar: Salon a confirmar <br>
             Dirección: A confirmar, Resistencia, Chaco <br>
         </p>
@@ -223,13 +329,57 @@
         <p>¡Tu presencia es nuestro mejor regalo! 
             <br>
             También podes ayudarnos con nuestra luna de miel realizando una transferencia al siguiente alias <br> o el día de la boda habrá una urna con sobres si queres hacerlo en efectivo</p>
-            <a class="buttonR" onclick="showImage()">Datos bancarios</button>
+            <a class="buttonR" onclick="showImage()">Datos bancarios</a>
             <div class="overlay" id="imageOverlay">
+                <img src="banner_smarphone/3.png" alt="Detalles del regalo">
                 <button class="close-btn" onclick="hideImage()">&times;</button>
-                <img src="datosbancarios.png" alt="Detalles del regalo">
             </div>
     </footer>
 
+    <section class="carousel-section">
+        <h2>Momentos especiales de nuestra historia juntos</h2>
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="carousel-slides">
+                <img src="foto1.jpg" alt="Foto 1 de los novios" class="carousel-image">
+                <img src="foto2.jpg" alt="Foto 2 de los novios" class="carousel-image">
+                <img src="foto3.jpg" alt="Foto 3 de los novios" class="carousel-image">
+                <img src="foto4.jpg" alt="Foto 4 de los novios" class="carousel-image">
+                <img src="foto5.jpg" alt="Foto 5 de los novios" class="carousel-image">
+            </div>
+            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <h2>Preguntas Frecuentes (FAQ)</h2>
+        <div class="faq-item">
+            <h3>¿Dónde puedo estacionar mi vehículo?</h3>
+            <p>Habrá estacionamiento gratuito disponible en el salón de fiestas. También puedes usar estacionamientos cercanos.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Qué vestimenta debo usar?</h3>
+            <p>El evento es formal. Se recomienda traje para los hombres y vestido elegante para las mujeres.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Hay opciones de comida para personas con alergias o vegetarianos?</h3>
+            <p>Sí, por favor indícanos tus necesidades alimenticias en el formulario de confirmación.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Puedo llevar niños al evento?</h3>
+            <p>El evento es solo para adultos. ¡Gracias por tu comprensión!</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cuál es el hashtag oficial de la boda?</h3>
+            <p>¡El hashtag oficial es <strong>#BodaEli&Cris</strong> para compartir en tus redes sociales.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Dónde más puedo compartir las fotos?</h3>
+            <p>Buscá el QR en las mesas o en distintos puntos del salón para acceder a nuestro album compartida y subí las fotos que saques para tener un hermoso recuerdo desde tus ojos. Por favor y muchas gracias por tomarte las molestias!</p>
+        </div>
+    </section>
+
+    
     <script>
         const weddingDate = new Date('2025-07-05T18:30:00').getTime();
 
@@ -265,6 +415,27 @@
         }
 
         setInterval(updateCountdown, 1000);
+
+        /**************/
+        /***CARRUSEL***/
+        /**************/
+
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelector('.carousel-slides');
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Toggle FAQ answers
+        document.querySelectorAll('.faq-item h3').forEach((header) => {
+            header.addEventListener('click', () => {
+                const answer = header.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
     </script>
 </body>
 </html>
