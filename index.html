@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,7 +104,7 @@
 
         .footer {
             text-align: center;
-            padding: 2rem 2rem 10rem 2rem;
+            padding: 2rem 2rem 7rem 2rem;
             background: #3a5199;
             color: #ffffff;
             font-size: 2rem;
@@ -149,7 +149,7 @@
 
         .overlay.close-btn {
             position: absolute;
-            top: 10px;
+            top: 0;
             right: 10px;
             font-size: 2.5rem;
             color: #3a5199;
@@ -174,7 +174,9 @@
 
         .carousel-section {
             text-align: center;
-            margin: 2rem 0;
+            margin: 0 50px 100px 50px; 
+            max-width: 100%;
+            max-height: 100vh;
         }
 
         .carousel {
@@ -182,9 +184,7 @@
             display: flex;
             align-items: center;
             overflow: hidden;
-            width: 90%;
-            max-width: 600px;
-            margin: 0 auto;
+            
         }
 
         .carousel-slides {
@@ -193,8 +193,8 @@
         }
 
         .carousel-image {
-            min-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
             border-radius: 10px;
         }
 
@@ -208,7 +208,7 @@
             font-size: 2rem;
             padding: 0.5rem 1rem;
             cursor: pointer;
-            z-index: 1;
+            z-index: 10;
         }
 
         .carousel-btn.prev {
@@ -221,18 +221,19 @@
 
         .faq-section {
             margin: 2rem auto;
-            max-width: 800px;
+            max-width: 80%;
             text-align: left;
             padding: 1rem;
-            background: #f9f9f9;
+            /*background: #f9f9f9;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
         }
 
         .faq-section h2 {
             text-align: center;
             color: #3a5199;
             margin-bottom: 1rem;
+            font-size: 3rem;
         }
 
         .faq-item {
@@ -242,12 +243,21 @@
         .faq-item h3 {
             color: #3a5199;
             cursor: pointer;
+            font-size: 1.7rem;
         }
 
         .faq-item p {
             display: none;
             margin: 0.5rem 0 0;
-            color: #333;
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+
+        .fin {
+            background-color: #f9f9f9;
+            color: #3a5199;
+            padding: 1rem;
+            font-size: 1.3rem;
         }
 
         @media (max-width: 768px) {
@@ -310,13 +320,27 @@
 
     <section class="section">
         <h2>CONFIRMAR ASISTENCIA</h2>
-        <p>Si te llegó esta invitación es porque queremos compartir nuestro día más importante con vos,<br>por eso es necesario que confirmes tu asistencia llenando el siguiente formulario. Si por algún motivo no vas a poder estar, por favor avisanos hasta el 03 de Marzo de 2025 para saber si contamos con vos</p>
+        <p>Si te llegó esta invitación es porque queremos compartir nuestro día más importante con vos,<br>por eso es necesario que confirmes tu asistencia llenando el siguiente formulario. Si por algún motivo no vas a poder estar, por favor avisanos hasta <span>el 05 de Marzo de 2025</span> para saber si contamos con vos</p>
         <a class="button" href="https://forms.gle/ejemploFormulario" target="_blank">Confirmo</a>
     </section>
 
     <section class="section">
         <h2>FRASE</h2>
         <p>“El amor podría ser coincidir, decidir, crecer y disfrutar con un si cada día"</p>
+    </section>
+
+    <section class="carousel-section">
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="carousel-slides">
+                <img src="nuestras_fotos/20230219_091928.jpg" alt="Foto_1_Eli&Cris" class="carousel-image">
+                <img src="nuestras_fotos/20230219_103811.jpg" alt="Foto_2_Eli&Cris" class="carousel-image">
+                <img src="nuestras_fotos/20230220_163946.jpg" alt="Foto_3_Eli&Cris" class="carousel-image">
+                <img src="nuestras_fotos/20230318_002900.jpg" alt="Foto_4_Eli&Cris" class="carousel-image">
+                <img src="nuestras_fotos/20231027_150446.jpg" alt="Foto_5_Eli&Cris" class="carousel-image">
+            </div>
+            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
     </section>
 
     <section class="section">
@@ -328,58 +352,50 @@
         <h2>REGALOS</h2>
         <p>¡Tu presencia es nuestro mejor regalo! 
             <br>
-            También podes ayudarnos con nuestra luna de miel realizando una transferencia al siguiente alias <br> o el día de la boda habrá una urna con sobres si queres hacerlo en efectivo</p>
-            <a class="buttonR" onclick="showImage()">Datos bancarios</a>
+            Aunque también podés ayudarnos con nuestra luna de miel realizando una transferencia o el día de la boda habrá una urna con sobres si prefieres hacerlo con efectivo.<br>El valor de la tarjeta es de $30.000.-</p>
+            <a class="buttonR" onclick="showImage()">Alias para transferir</a>
             <div class="overlay" id="imageOverlay">
                 <img src="banner_smarphone/3.png" alt="Detalles del regalo">
                 <button class="close-btn" onclick="hideImage()">&times;</button>
             </div>
-    </footer>
 
-    <section class="carousel-section">
-        <h2>Momentos especiales de nuestra historia juntos</h2>
-        <div class="carousel">
-            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-            <div class="carousel-slides">
-                <img src="foto1.jpg" alt="Foto 1 de los novios" class="carousel-image">
-                <img src="foto2.jpg" alt="Foto 2 de los novios" class="carousel-image">
-                <img src="foto3.jpg" alt="Foto 3 de los novios" class="carousel-image">
-                <img src="foto4.jpg" alt="Foto 4 de los novios" class="carousel-image">
-                <img src="foto5.jpg" alt="Foto 5 de los novios" class="carousel-image">
-            </div>
-            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
-        </div>
-    </section>
+    </footer>
     
     <section class="faq-section">
-        <h2>Preguntas Frecuentes (FAQ)</h2>
+        <h2>INFORMACION IMPORTANTE</h2>
         <div class="faq-item">
             <h3>¿Dónde puedo estacionar mi vehículo?</h3>
-            <p>Habrá estacionamiento gratuito disponible en el salón de fiestas. También puedes usar estacionamientos cercanos.</p>
+            <p>En caso de ir en auto propio el salón cuenta con estacionamiento gratuito disponible alrededor.</p>
         </div>
         <div class="faq-item">
             <h3>¿Qué vestimenta debo usar?</h3>
-            <p>El evento es formal. Se recomienda traje para los hombres y vestido elegante para las mujeres.</p>
+            <p>Elegante sport, en lo posible evitar el color blanco y gris.</p>
         </div>
         <div class="faq-item">
             <h3>¿Hay opciones de comida para personas con alergias o vegetarianos?</h3>
-            <p>Sí, por favor indícanos tus necesidades alimenticias en el formulario de confirmación.</p>
+            <p>Sí, por favor indícanos tus necesidades alimentarias en el formulario de confirmación.</p>
         </div>
         <div class="faq-item">
             <h3>¿Puedo llevar niños al evento?</h3>
-            <p>El evento es solo para adultos. ¡Gracias por tu comprensión!</p>
+            <p>Para que puedas disfrutar del eventos te recomendamos ir sin niños.</p>
         </div>
         <div class="faq-item">
             <h3>¿Cuál es el hashtag oficial de la boda?</h3>
-            <p>¡El hashtag oficial es <strong>#BodaEli&Cris</strong> para compartir en tus redes sociales.</p>
+            <p>¡El hashtag oficial del evento para compartir en tus redes sociales es <strong>#BodaEli&Cris</strong></p>
         </div>
         <div class="faq-item">
             <h3>¿Dónde más puedo compartir las fotos?</h3>
-            <p>Buscá el QR en las mesas o en distintos puntos del salón para acceder a nuestro album compartida y subí las fotos que saques para tener un hermoso recuerdo desde tus ojos. Por favor y muchas gracias por tomarte las molestias!</p>
+            <p>Buscá el QR en las mesas o en distintos puntos del salón para acceder a nuestro album compartido y cargar las fotos que saques para tener un hermoso recuerdo desde tus ojos. Por favor y muchas gracias!</p>
         </div>
     </section>
 
-    
+    <div class="fin">
+        <p>
+          <span
+            >Desarrollado por Elitian &copy; 2025</span>
+        </p>
+    </div>
+
     <script>
         const weddingDate = new Date('2025-07-05T18:30:00').getTime();
 
