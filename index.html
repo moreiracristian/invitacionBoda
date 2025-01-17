@@ -6,7 +6,8 @@
     <title>Eliana & Cristian</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <style>
-
+        @import url('https://fonts.cdnfonts.com/css/outright-2');
+        @import url('https://fonts.cdnfonts.com/css/lovan');
         * {
             margin: 0;
             padding: 0;
@@ -19,10 +20,25 @@
 
         body {
             text-align: center;
-            font-family: 'Playfair Display', 'Raleway';
-            background-color: #b4b4b4;
             color: #3a5199;
             line-height: 1.6;
+            position: relative; /* Necesario para que funcione el pseudoelemento */
+            background-color: #fff; /* Fondo base */
+            margin: 0;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/elementos/fondo.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6; /* Ajusta el nivel de opacidad */
+            z-index: -1; /* Envía el pseudoelemento detrás del contenido */
         }
 
         .banner-section {
@@ -45,15 +61,43 @@
             overflow: hidden;
         }
 
+        .hexagono {
+            position: center;
+            display: inline;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            max-height: 100vh;
+        }
+
+        .titulo-principal {
+            font-family: 'Outright', sans-serif;
+            color: #3a5199;
+            position: absolute;
+            font-size: 5.4rem;
+            margin: 0;
+            padding: 200px 870px;
+            text-align: center;
+            max-width: 100%;
+            max-height: 100vh;
+        }
+
         .section {
             padding: 2rem 1rem;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
             font-size: 2rem;
         }
 
+        .linea {
+            display: block;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+        }
+
         .section h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Lovan', sans-serif;
             font-size: 3.5rem;
             margin-bottom: 1rem;
         }
@@ -61,7 +105,24 @@
         .section p {
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
-            font-family: 'Raleway', serif;
+        }
+
+        .section-frase {
+            padding: 1rem 0 1rem;
+            max-width: 100%;
+            margin: 3rem 0 0 0;
+            font-family: 'Lovan', sans-serif;
+            color: #2f2e33;
+        }
+
+        .section-frase p{
+            margin: 0;
+            padding: 0;
+            font-size: 4.7rem;
+        }
+
+        .section-date h2{
+            font-size: 5rem;
         }
 
         .button {
@@ -174,7 +235,7 @@
 
         .carousel-section {
             text-align: center;
-            margin: 0 50px 100px 50px; 
+            margin: 50px 50px 0 50px; 
             max-width: 100%;
             max-height: 100vh;
         }
@@ -220,10 +281,12 @@
         }
 
         .faq-section {
+            font-family: 'Lovan', sans-serif;
             margin: 2rem auto;
             max-width: 80%;
             text-align: left;
             padding: 1rem;
+            
             /*background: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
@@ -233,7 +296,7 @@
             text-align: center;
             color: #3a5199;
             margin-bottom: 1rem;
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         .faq-item {
@@ -292,43 +355,16 @@
 </head>
 <body>
     <header class="banner-section">
-        <img src="images/banner_smarphone/1.png" alt="Portada para smartphone" class="banner-image smartphone">
-        <img src="images/banner_notebook/1.png" alt="Portada para notebook" class="banner-image notebook">
+        <!--<img src="images/banner_smarphone/1.png" alt="Portada para smartphone" class="banner-image smartphone">
+        <img src="images/banner_notebook/1.png" alt="Portada para notebook" class="banner-image notebook">-->
+        <h1 class="titulo-principal">Eliana<br>&<br>Cristian</h1>
+        <img src="images/elementos/exagano principal.png" alt="hexagono principal" class="hexagono">
+            
     </header>
 
-    <section class="section">
-        <h2><br>IGLESIA Y CIVIL</h2>
-        <p>
-            Fecha: 05 de Julio de 2025 <br>
-            Hora: 18:30 hs <br>
-            Lugar: Parroquia San Francisco Javier <br>
-            Dirección: Colon 428, Resistencia, Chaco <br>
-        </p>
-        <a class="button" href="https://maps.app.goo.gl/SGz8resAJJ1nyFPx5" target="_blank">¿Cómo llego?</a>
-    </section>
-
-    <section class="section">
-        <h2>FIESTA</h2>
-        <p>
-            Fecha: 05 de Julio de 2025 <br>
-            Hora: 21:30 hs <br>
-            Lugar: Salon a confirmar <br>
-            Dirección: A confirmar, Resistencia, Chaco <br>
-        </p>
-        <a class="button" href="https://maps.app.goo.gl/cfGyEkQjbutCgWUt5" target="_blank">¿Cómo llego?</a>
-    </section>
-
-    <section class="section">
-        <h2>CONFIRMAR ASISTENCIA</h2>
-        <p>Si te llegó esta invitación es porque queremos compartir nuestro día más importante con vos,<br>por eso es necesario que confirmes tu asistencia llenando el siguiente formulario. Si por algún motivo no vas a poder estar, por favor avisanos hasta <span>el 05 de Marzo de 2025</span> para saber si contamos con vos</p>
-        <a class="button" href="https://forms.gle/ejemploFormulario" target="_blank">Confirmo</a>
-    </section>
-
-    <section class="section">
-        <h2>FRASE</h2>
+    <section class="section-frase">
         <p>“El amor podría ser coincidir, decidir, crecer y disfrutar con un si cada día"</p>
     </section>
-
     <section class="carousel-section">
         <div class="carousel">
             <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
@@ -343,26 +379,62 @@
         </div>
     </section>
 
-    <section class="section">
-        <h2>FALTA POCO</h2>
-        <div id="countdown"></div>
-    </section>
+    <div>
+        <img src="images/elementos/linea division.png" alt="linea division" class="linea">
+    </div>
 
-    <footer class="footer">
-        <h2>REGALOS</h2>
+    <section class="section-date">
+        <h2>SAVE THE DATE</h2>
+        <p>
+            05 de Julio de 2025
+        </p>
+    </section>
+    
+    
+        <img src="images/elementos/linea division.png" alt="linea division" class="linea">
+    
+
+    <section class="section">
+        <h2>CEREMONIA <br>
+            RELIGIOSA Y CIVIL</h2>
+        <p>
+            Fecha: 05 de Julio de 2025 <br>
+            Hora: 18:30 hs <br>
+            Lugar: Parroquia San Francisco Javier <br>
+            Dirección: Colon 428, Resistencia, Chaco <br>
+        </p>
+        <a class="button" href="https://maps.app.goo.gl/SGz8resAJJ1nyFPx5" target="_blank">¿Cómo llego?</a>
+    </section>
+    <br>
+
+    <section class="section">
+        <h2>CELEBRACIÓN</h2>
+        <p>
+            Fecha: 05 de Julio de 2025 <br>
+            Hora: 21:30 hs <br>
+            Lugar: Salon a confirmar <br>
+            Dirección: A confirmar, Resistencia, Chaco <br>
+        </p>
+        <a class="button" href="https://maps.app.goo.gl/cfGyEkQjbutCgWUt5" target="_blank">¿Cómo llego?</a>
+    </section>
+    <br>
+
+    <section class="section">
+        <h2>OBSEQUIOS</h2>
         <p>¡Tu presencia es nuestro mejor regalo! 
             <br>
-            Aunque también podés ayudarnos con nuestra luna de miel realizando una transferencia o el día de la boda habrá una urna con sobres si prefieres hacerlo con efectivo.<br>El valor de la tarjeta es de $30.000.-</p>
+            Aunque también podés ayudarnos con nuestra luna de miel realizando una transferencia o el día de la boda habrá una urna con sobres si prefieres hacerlo con efectivo.</p>
             <a class="buttonR" onclick="showImage()">Alias para transferir</a>
             <div class="overlay" id="imageOverlay">
                 <img src="images/banner_smarphone/3.png" alt="Detalles del regalo">
                 <button class="close-btn" onclick="hideImage()">&times;</button>
             </div>
+    </section>
+    <br>
 
-    </footer>
-    
+
     <section class="faq-section">
-        <h2>INFORMACION IMPORTANTE</h2>
+        <h2>TIPS E INFO</h2>
         <div class="faq-item">
             <h3>¿Dónde puedo estacionar mi vehículo?</h3>
             <p>En caso de ir en auto propio el salón cuenta con estacionamiento gratuito disponible alrededor.</p>
@@ -388,13 +460,26 @@
             <p>Buscá el QR en las mesas o en distintos puntos del salón para acceder a nuestro album compartido y cargar las fotos que saques para tener un hermoso recuerdo desde tus ojos. Por favor y muchas gracias!</p>
         </div>
     </section>
+    <br>
 
-    <div class="fin">
+    <section class="section">
+        <h2>CONFIRMAR ASISTENCIA</h2>
+        <p>Si te llegó esta invitación es porque queremos compartir nuestro día más importante con vos,<br>por eso es necesario que confirmes tu asistencia llenando el siguiente formulario. Si por algún motivo no vas a poder estar, por favor avisanos hasta <span>el 05 de Marzo de 2025</span> para saber si contamos con vos</p>
+        <a class="button" href="https://forms.gle/ejemploFormulario" target="_blank">Confirmo</a>
+    </section>
+    <br>
+
+    <section class="section">
+        <h2>FALTA POCO</h2>
+        <div id="countdown"></div>
+    </section>
+
+    <footer class="fin">
         <p>
           <span
             >Desarrollado por Elitian &copy; 2025</span>
         </p>
-    </div>
+    </footer>
 
     <script>
         const weddingDate = new Date('2025-07-05T18:30:00').getTime();
