@@ -4,7 +4,7 @@ galeria
 ceremonia religiosa y civil
 celebracion
 tarjeta
-dress code
+- dress code
 tips e info
 obsequios
 confirmacion
