@@ -5,584 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliana & Cristian</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/outright-2');
-        @import url('https://fonts.cdnfonts.com/css/lovan');
-        @import url('https://fonts.cdnfonts.com/css/qhairo');
-        @import url('https://fonts.cdnfonts.com/css/hellomissthang');
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        body {
-            text-align: center;
-            color: #3a5199;
-            line-height: 1.6;
-            position: relative; /* Necesario para que funcione el pseudoelemento */
-            background-color: #fff; /* Fondo base */
-            margin: 0;
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('images/elementos/fondo.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.6; /* Ajusta el nivel de opacidad */
-            z-index: -1; /* Envía el pseudoelemento detrás del contenido */
-        }
-
-        .banner-section {
-            text-align: center;
-            max-width: 100%;
-            max-height: 100vh; /* Ocupa toda la altura de la pantalla */
-            margin: 0;
-        }
-
-        .banner-image {
-            display: none; /* Ocultar imágenes por defecto */
-            width: 100%;
-        }
-
-        header {
-            margin: 0;
-            padding: 0;
-            color: #b4b4b4;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hexagono {
-            position: center;
-            display: inline;
-            margin: 0;
-            padding: 0;
-            max-width: 100%;
-            max-height: 100vh;
-        }
-
-        .titulo-principal {
-            font-family: 'Outright', sans-serif;
-            color: #3a5199;
-            position: absolute;
-            font-size: 5.4rem;
-            margin: 0;
-            padding: 200px 870px;
-            text-align: center;
-            max-width: 100%;
-            max-height: 100vh;
-        }
-
-        .section {
-            padding: 2rem 1rem;
-            max-width: 100%;
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        .linea {
-            display: block;
-            margin: 0;
-            padding: 0;
-            max-width: 100%;
-        }
-
-        .elementos {
-            display: inline-block;
-            margin-top: 50px;
-            padding: 0;
-            width: 300px; /* Define el ancho */
-            height: auto; /* Mantiene la proporción */
-        }
-
-        .linea-2 {
-            display: inline-block;
-            margin-top: 50px;
-            padding: 0;
-            width: 500px; /* Define el ancho */
-            height: auto; /* Mantiene la proporción */
-        }
-
-        .copas {
-            display: inline-block;
-            margin-top: 50px;
-            padding: 0;
-            width: auto; 
-            height: 230px; 
-        }
-
-        .section h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section p {
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-
-        .section-frase {
-            padding: 1rem 0 1rem;
-            max-width: 100%;
-            margin: 3rem 0 0 0;
-            font-family: 'Lovan', sans-serif;
-            color: #2f2e33;
-        }
-
-        .section-frase p {
-            margin: 0;
-            padding: 0;
-            font-size: 4.7rem;
-        }
-
-        .section-date h1 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 10rem;
-            margin-top: 10px;
-            letter-spacing: 10px;
-            color: #b4b4b4;
-        }
-
-        .section-date h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 6rem;
-        }
-
-        .section-date p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 4rem;
-            margin-bottom: 80px;
-        }
-
-        .btn-calendar {
-            display: inline-block;
-            margin-bottom: 80px;
-            padding: 10px 20px;
-            background-color: #3a5199;
-            color: white;
-            border-radius: 5px;
-            font-size: 2rem;
-            font-family: 'HelloMissThang', sans-serif;
-        }
-
-        .btn-calendar:hover {
-            background-color: #b4b4b4;
-        }
-
-        .section-info h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .section-info p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #2f2e33;
-        }
-
-        .section-tarjeta h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .section-tarjeta p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 2rem;
-            margin: 1.5rem 10rem;
-            color: #2f2e33;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            color: #ffffff;
-            background: #3a5199;
-            border-radius: 5px;
-            font-size: 2.5rem;
-            font-family: 'HelloMissThang', sans-serif;
-            margin-bottom: 70px;
-        }
-
-        .button:hover {
-            background: #b4b4b4;
-        }
-
-        .buttonR {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            color: #ffffff;
-            background: #3a5199;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 2.5rem;
-            font-family: 'HelloMissThang', sans-serif;
-        }
-
-        .buttonR:hover {
-            background: #b4b4b4;
-        }
-
-        .section-dresscode h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .section-dresscode p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 2rem;
-            margin: 1.5rem 10rem;
-            color: #2f2e33;
-        }
-
-        .section-dresscode span {
-            font-size: 2rem;
-            margin: 1.5rem 10rem;
-            color: #2f2e33;
-            font-weight: bold;
-        }
-
-        #countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            font-size: 2rem;
-            font-weight: bold;
-            padding: 0 0 5rem 0;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2rem 2rem 7rem 2rem;
-            background: #3a5199;
-            color: #ffffff;
-            font-size: 2rem;
-        }
-
-        .footer p {
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            font-family: 'Raleway', serif;
-        }
-
-        /* Imagen superpuesta */
-        .overlay {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            max-width: 100%;
-            max-height: 90vh; /* Ocupa toda la altura de la pantalla */
-            background: rgba(180, 180, 180, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            z-index: 100;
-        }
-
-        .overlay img {
-            max-width: 90%;
-            height: 70vh;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(58, 81, 153, 0.9);
-        }
-
-        .overlay.active {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .overlay.close-btn {
-            position: absolute;
-            top: 0;
-            right: 10px;
-            font-size: 2.5rem;
-            color: #3a5199;
-            cursor: pointer;
-            background: #3a5199;
-            border: none;
-            padding: 10px 15px; /* Añade espacio alrededor del icono */
-            border-radius: 50%; /* Botón redondeado */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
-            transition: transform 0.2s, background-color 0.2s; /* Animación */
-        }
-
-        .overlay .close-btn:hover {
-            background: #b4b4b4; /* Cambia el color al pasar el cursor */
-            transform: scale(2.1); /* Agranda el botón ligeramente */
-        }
-
-
-        /**************/
-        /***CARRUSEL***/
-        /**************/
-
-        .carousel-section {
-            text-align: center;
-            margin: 0 100px 50px; 
-            max-width: 100%;
-            max-height: 100vh;
-        }
-
-        .carousel {
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            font-size: 2rem;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .carousel-btn.prev {
-            left: 10px;
-        }
-
-        .carousel-btn.next {
-            right: 10px;
-        }
-
-        /*
-        .section-tips {
-            font-family: 'Lovan', sans-serif;
-            margin: 2rem auto;
-            max-width: 80%;
-            text-align: left;
-            padding: 1rem;
-            
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }*/ 
-
-        .section-tips h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .section-tips p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 2rem;
-            margin: 1.5rem 10rem;
-            color: #2f2e33;
-            text-align: left;
-        }
-
-        .hexagono-1 {
-            display: inline;
-            padding: 0;
-            width: 30px; /* Define el ancho */
-            height: auto; /* Mantiene la proporción */
-            vertical-align: middle;
-        }
-
-        .section-regalos h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .section-regalos p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 2rem;
-            margin: 1.5rem 10rem;
-            color: #2f2e33;
-        }
-
-        .section-confirmar h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .section-confirmar p {
-            font-family: 'Qhairo', sans-serif;
-            font-size: 2rem;
-            margin: 1.5rem 10rem;
-            color: #2f2e33;
-        }
-
-        .section-conteo  {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .section-conteo h2 {
-            font-family: 'Lovan', sans-serif;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-        }
-
-        .countdown-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Espacio entre cada unidad de tiempo */
-            align-items: center;
-        }
-
-        .time-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: 'HelloMissThang', sans-serif;
-            font-size: 50px;
-        }
-
-        .image-container {
-            position: relative;
-            width: 300px; /* Ajusta el tamaño de la imagen */
-            height: 300px; /* Ajusta el tamaño de la imagen */
-            text-align: center;
-        }
-
-        .time-icon {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
-            border-radius: 10px; /* Bordes redondeados en la imagen */
-        }
-
-        .countdown-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 18px;
-            font-weight: bold;
-            color: #2f2e33;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .countdown-text span:first-child {
-            font-size: 50px; /* Tamaño del número */
-            font-weight: bold;
-        }
-
-        .countdown-text span:last-child {
-            font-size: 40px; /* Tamaño del texto del tiempo */
-            font-weight: normal;
-        }
-
-        #countdown span {
-            font-weight: bold;
-        }
-
-        /*
-        #countdown {
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-        }*/
-
-        .fin {
-            background-color: #f9f9f9;
-            color: #3a5199;
-            padding: 1rem;
-            font-size: 1.3rem;
-            font-family: 'HelloMissThang', sans-serif;
-        }
-
-        @media (max-width: 768px) {
-
-            .banner-image.smartphone {
-                display: block;
-            }
-
-            header h1 {
-                font-size: 3.3rem;
-            }
-
-            .section h2 {
-                font-size: 3.3rem;
-            }
-
-            .section p {
-                font-size: 1.8rem;
-            }
-
-            .button {
-                font-size: 2rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .banner-image.notebook {
-                display: block;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="banner-section">
-        <!--<img src="images/banner_smarphone/1.png" alt="Portada para smartphone" class="banner-image smartphone">
-        <img src="images/banner_notebook/1.png" alt="Portada para notebook" class="banner-image notebook">-->
+    <header class="section-banner">
         <h1 class="titulo-principal">Eliana<br>&<br>Cristian</h1>
         <img src="images/elementos/exagano principal.png" alt="hexagono principal" class="hexagono">
-            
     </header>
-
 
     <section class="section-frase">
         <p>“El amor podría ser coincidir, decidir, crecer y disfrutar con un si cada día"</p>
     </section>
-    <section class="carousel-section">
+
+    <section class="section-carousel">
         <div class="carousel">
             <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
             <div class="carousel-slides">
@@ -597,35 +32,23 @@
             <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </section>
-    
-    <!--
-    <div>
-        <img src="images/elementos/linea division.png" alt="linea division" class="linea">
-    </div>
-    -->
-    
+
     <section class="section-date">
         <h1>¡NOS CASAMOS!</h1>
         <h2>SAVE THE DATE</h2>
-        <p>
-            05 de Julio de 2025
-        </p>
-        <a class="btn-calendar" id="googleCalendarButton" href="#" target="_blank">
-            AGENDA LA FECHA
-        </a>
+        <p>05 de Julio de 2025</p>
+        <a class="btn-calendar" id="googleCalendarButton" href="#" target="_blank">AGENDA LA FECHA</a>
     </section>
-    
-    
+
     <img src="images/elementos/linea division.png" alt="linea division" class="linea">
-    
+
     <img src="images/elementos/manos.png" alt="linea division" class="elementos">
 
-    
     <section class="section-info">
         <h2>CEREMONIA RELIGIOSA Y CIVIL</h2>
-            <p>18:30 hs</p>
-            <p>Parroquia San Francisco Javier</p>
-            <p>Colon 428, Resistencia, Chaco</p>
+        <p>18:30 hs</p>
+        <p>Parroquia San Francisco Javier</p>
+        <p>Colon 428, Resistencia, Chaco</p>
         <a class="button" href="https://maps.app.goo.gl/SGz8resAJJ1nyFPx5" target="_blank">¿Cómo llego?</a>
     </section>
 
@@ -633,9 +56,9 @@
 
     <section class="section-info">
         <h2>CENA COMPARTIDA</h2>
-            <p>21:00 hs - 04:00 hs</p>
-            <p>Restaurante Puerto Madero</p>
-            <p>Av. Marconi, Acceso Aeropuerto</p>
+        <p>21:00 hs</p>
+        <p>Restaurante Puerto Madero</p>
+        <p>Av. Marconi, Acceso Aeropuerto</p>
         <a class="button" href="https://maps.app.goo.gl/9Sp44MjMPohqKUTZ9" target="_blank">¿Cómo llego?</a>
     </section>
 
@@ -643,44 +66,43 @@
 
     <section class="section-tarjeta">
         <h2>TARJETA</h2>
-            <p>"La tarjeta cuesta $30.000.- No hay mas que decir. Bueno, excepto que si no contribuyes, quizas tengamos que cancelar la luna de miel. ¡Agradecemos tu apoyo!"</p>
-            <a class="buttonR" onclick="showImage()">Alias para tarjeta</a>
-            <div class="overlay" id="imageOverlay">
-                <img src="images/banner_smarphone/3.png" alt="Detalles del regalo">
-                <button class="close-btn" onclick="hideImage()">&times;</button>
-            </div>
+        <p>"La tarjeta cuesta $30.000.- No hay mas que decir. Bueno, excepto que sin tu aporte, quizas tengamos que cancelar la luna de miel. ¡Agradecemos tu apoyo!"</p>
+        <a class="buttonR" onclick="showImage()">Alias para tarjeta</a>
+        <div class="overlay" id="imageOverlay">
+            <img src="images/banner_smarphone/3.png" alt="Detalles del regalo">
+            <button class="close-btn" onclick="hideImage()">&times;</button>
+        </div>
     </section>
 
     <img src="images/elementos/linea.png" alt="linea division" class="linea-2">
 
     <section class="section-dresscode">
         <h2>DRESS CODE</h2>
-            <p>Vestite con estilo, pero asegurate de que tus pies esten comodos y calentitos...</p>
-            <p><span>¡Solo zapatillas para este dia!</span></p>
-            <img src="images/elementos/zapatillas.png" alt="linea division" class="elementos">
-            
+        <p>Vestite con estilo, pero asegurate de que tus pies esten comodos y calentitos...</p>
+        <p><span>¡Solo zapatillas para este dia!</span></p>
+        <img src="images/elementos/zapatillas.png" alt="linea division" class="elementos">
     </section>
 
     <img src="images/elementos/linea division.png" alt="linea division" class="linea">
 
     <section class="section-tips">
         <h2>TIPS E INFO</h2>
-            <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> Por favor ser puntuales.</p>
-            <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> En caso de ir en auto propio el salon cuenta con estacionamiento gratuito disponible.</p>
-            <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> ¡El hashtag oficial para compartir en tus redes sociales es <strong>#BodaEli&Cris</strong></p>
-            <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> LLevar abrigo para la vuelta.</p>
+        <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> Por favor ser puntuales.</p>
+        <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> En caso de ir en auto propio el salon cuenta con estacionamiento gratuito disponible.</p>
+        <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> ¡El hashtag oficial para compartir en tus redes sociales es <strong>#BodaEli&Cris</strong></p>
+        <p><img src="images/elementos/exagono.png" alt="linea division" class="hexagono-1"> LLevar abrigo para la vuelta.</p>
     </section>
-    
+
     <img src="images/elementos/linea.png" alt="linea division" class="linea-2">
 
     <section class="section-regalos">
         <h2>REGALO</h2>
         <p>Si tu corazon lo siente y tu billetera lo permite, puedes ayudarnos con un poquito extra, ¡tus aportes seran recibidos con abrazos fuertes y gratitud!"</p>
-            <a class="buttonR" onclick="showImage()">Alias para regalos</a>
-            <div class="overlay" id="imageOverlay">
-                <img src="images/banner_smarphone/3.png" alt="Detalles del regalo">
-                <button class="close-btn" onclick="hideImage()">&times;</button>
-            </div>
+        <a class="buttonR" onclick="showImage()">Alias para regalos</a>
+        <div class="overlay" id="imageOverlay">
+            <img src="images/banner_smarphone/3.png" alt="Detalles del regalo">
+            <button class="close-btn" onclick="hideImage()">&times;</button>
+        </div>
     </section>
 
     <img src="images/elementos/linea.png" alt="linea division" class="linea-2">
@@ -690,7 +112,7 @@
         <p>Nosotros ya nos comprometimos al si, falta el tuyo. La cuenta regresiva comienza, ¿nos haras el honor de ser parte? Confirma tu asistencia antes del <span>05 de Abril de 2025</span></p>
         <a class="button" href="https://forms.gle/ejemploFormulario" target="_blank">Confirmo</a>
     </section>
-    
+
     <img src="images/elementos/linea.png" alt="linea division" class="linea-2">
 
     <section class="section-conteo">
@@ -735,86 +157,10 @@
         </div>
     </section>
 
-    <footer class="fin">
-        <p>
-          <span
-            >Desarrollado por Elitian &copy; 2025</span>
-        </p>
+    <footer class="footer">
+        <p><span>Desarrollado por Elitian &copy; 2025</span></p>
     </footer>
 
-    <script>
-
-        // Formatear la fecha para Google Calendar
-        const eventDate = new Date(2025, 6, 5, 15, 30); // Año, mes (0-indexed), día, hora, minutos
-        const startDate = eventDate.toISOString().replace(/[-:]/g, '').split('.')[0];
-        const endDate = new Date(eventDate);
-        endDate.setHours(endDate.getHours() + 10); // Evento de 9 horas
-        const endDateString = endDate.toISOString().replace(/[-:]/g, '').split('.')[0];
-
-        // Configurar los parámetros de Google Calendar
-        const calendarURL = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
-            `&text=Boda%20Eli%26Cris` +
-            `&dates=${startDate}/${endDateString}` +
-            `&details=Te%20invitamos%20a%20celebrar%20este%20día%20especial%20con%20nosotros` +
-            `&location=` +
-            `&sf=true&output=xml`;
-
-        // Asignar la URL al botón
-        document.getElementById('googleCalendarButton').href = calendarURL;
-
-        const weddingDate = new Date('2025-07-05T15:30:00').getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const difference = weddingDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerHTML = days;
-            document.getElementById('hours').innerHTML = hours;
-            document.getElementById('minutes').innerHTML = minutes;
-            document.getElementById('seconds').innerHTML = seconds;
-
-            if (difference < 0) {
-                document.getElementById('countdown').innerHTML = "¡Es hoy!";
-            }
-        }
-
-        function showImage() {
-            const overlay = document.getElementById('imageOverlay');
-            overlay.classList.add('active');
-        }
-
-        function hideImage() {
-            const overlay = document.getElementById('imageOverlay');
-            overlay.classList.remove('active');
-        }
-
-        setInterval(updateCountdown, 1000);
-
-        /**************/
-        /***CARRUSEL***/
-        /**************/
-
-        let currentSlide = 0;
-
-        function changeSlide(direction) {
-            const slides = document.querySelector('.carousel-slides');
-            const totalSlides = slides.children.length;
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        // Toggle FAQ answers
-        document.querySelectorAll('.faq-item h3').forEach((header) => {
-            header.addEventListener('click', () => {
-                const answer = header.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

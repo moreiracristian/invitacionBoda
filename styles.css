@@ -1,0 +1,575 @@
+@import url('https://fonts.cdnfonts.com/css/outright-2');
+@import url('https://fonts.cdnfonts.com/css/lovan');
+@import url('https://fonts.cdnfonts.com/css/qhairo');
+@import url('https://fonts.cdnfonts.com/css/hellomissthang');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    color: #3a5199;
+    line-height: 1.6;
+    position: relative;
+    background-color: #fff;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/elementos/fondo.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+
+/**************/
+/****BANNER****/
+/**************/
+
+
+.section-banner {
+    text-align: center;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: 0;
+}
+
+.banner-image {
+    display: none;
+    width: 100%;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    color: #b4b4b4;
+    position: relative;
+    overflow: hidden;
+}
+
+.hexagono {
+    position: center;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.titulo-principal {
+    font-family: 'Outright', sans-serif;
+    color: #3a5199;
+    position: absolute;
+    font-size: 5.4rem;
+    margin: 0;
+    padding: 200px 870px;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.linea {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.elementos {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 0;
+    width: 300px;
+    height: auto;
+}
+
+.linea-2 {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 0;
+    width: 500px;
+    height: auto;
+}
+
+.copas {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 0;
+    width: auto;
+    height: 230px;
+}
+
+.section h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+
+/**************/
+/****FRASE*****/
+/**************/
+
+
+.section-frase {
+    padding: 1rem 0 1rem;
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    font-family: 'Lovan', sans-serif;
+    color: #2f2e33;
+}
+
+.section-frase p {
+    margin: 0;
+    padding: 0;
+    font-size: 4.7rem;
+}
+
+
+/**************/
+/***CARRUSEL***/
+/**************/
+
+
+.section-carousel {
+    text-align: center;
+    margin: 0 100px 50px; 
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+
+/**************/
+/******DATE****/
+/**************/
+
+
+.section-date h1 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 10rem;
+    margin-top: 10px;
+    letter-spacing: 10px;
+    color: #b4b4b4;
+}
+
+.section-date h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 6rem;
+}
+
+.section-date p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 80px;
+}
+
+.btn-calendar {
+    display: inline-block;
+    margin-bottom: 80px;
+    padding: 10px 20px;
+    background-color: #3a5199;
+    color: white;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: 'HelloMissThang', sans-serif;
+}
+
+.btn-calendar:hover {
+    background-color: #b4b4b4;
+}
+
+
+/**************/
+/*****INFO*****/
+/**************/
+
+
+.section-info h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.section-info p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2f2e33;
+}
+
+
+/***************/
+/****TARJETA****/
+/***************/
+
+
+.section-tarjeta h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.section-tarjeta p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 10rem;
+    color: #2f2e33;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    background: #3a5199;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    font-family: 'HelloMissThang', sans-serif;
+    margin-bottom: 70px;
+}
+
+.button:hover {
+    background: #b4b4b4;
+}
+
+.buttonR {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    background: #3a5199;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    font-family: 'HelloMissThang', sans-serif;
+}
+
+.buttonR:hover {
+    background: #b4b4b4;
+}
+
+/******************/
+/****DRESS CODE****/
+/******************/
+
+.section-dresscode h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.section-dresscode p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 10rem;
+    color: #2f2e33;
+}
+
+.section-dresscode span {
+    font-size: 2rem;
+    margin: 1.5rem 10rem;
+    color: #2f2e33;
+    font-weight: bold;
+}
+
+
+/**************/
+/****TIPS******/
+/**************/
+
+
+.section-tips h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.section-tips p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 10rem;
+    color: #2f2e33;
+    text-align: left;
+}
+
+.hexagono-1 {
+    display: inline;
+    padding: 0;
+    width: 30px; /* Define el ancho */
+    height: auto; /* Mantiene la proporción */
+    vertical-align: middle;
+}
+
+
+/***************/
+/****REGALOS****/
+/***************/
+
+
+.section-regalos h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.section-regalos p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 10rem;
+    color: #2f2e33;
+}
+
+/****************/
+/****CONFIMAR****/
+/****************/
+
+
+.section-confirmar h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.section-confirmar p {
+    font-family: 'Qhairo', sans-serif;
+    font-size: 2rem;
+    margin: 1.5rem 10rem;
+    color: #2f2e33;
+}
+
+
+/**************/
+/****CONTEO****/
+/**************/
+
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 0 5rem 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 90vh;
+    background: rgba(180, 180, 180, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+.overlay img {
+    max-width: 90%;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(58, 81, 153, 0.9);
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1
+}
+
+.overlay.close-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 2.5rem;
+    color: #3a5199;
+    cursor: pointer;
+    background: #3a5199;
+    border: none;
+    padding: 10px 15px; /* Añade espacio alrededor del icono */
+    border-radius: 50%; /* Botón redondeado */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    transition: transform 0.2s, background-color 0.2s; /* Animación */
+}
+
+.overlay .close-btn:hover {
+    background: #b4b4b4; /* Cambia el color al pasar el cursor */
+    transform: scale(2.1); /* Agranda el botón ligeramente */
+}
+
+.section-conteo  {
+    text-align: center;
+    padding: 20px;
+}
+
+.section-conteo h2 {
+    font-family: 'Lovan', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre cada unidad de tiempo */
+    align-items: center;
+}
+
+.time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'HelloMissThang', sans-serif;
+    font-size: 50px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: 300px; /* Ajusta el tamaño de la imagen */
+    text-align: center;
+}
+
+.time-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados en la imagen */
+}
+
+.countdown-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f2e33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-text span:first-child {
+    font-size: 50px; /* Tamaño del número */
+    font-weight: bold;
+}
+
+.countdown-text span:last-child {
+    font-size: 40px; /* Tamaño del texto del tiempo */
+    font-weight: normal;
+}
+
+#countdown span {
+    font-weight: bold;
+}
+
+/**************/
+/****FOOTER****/
+/**************/
+
+.footer {
+    background-color: #f9f9f9;
+    color: #3a5199;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-family: 'HelloMissThang', sans-serif;
+}
+
+@media (max-width: 768px) {
+
+    .titulo-principal {
+        font-size: 5rem;
+        padding: 130px 300px;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    /* .section-info, .section-tarjeta, .section-dresscode, .section-tips, .section-regalos, .section-confirmar, .section-conteo */
+
+    .button {
+        font-size: 3rem;
+    }
+
+    .countdown-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    
+}
