@@ -62,26 +62,52 @@ header {
     overflow: hidden;
 }
 
-.hexagono {
+/* .hexagono {
     position: center;
     display: inline;
     margin: 0;
     padding: 0;
     max-width: 100%;
     max-height: 100vh;
+} */
+
+.hexagono {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 0 auto;
+    padding: 0;
+    max-height: 100vh;
+    aspect-ratio: 1; /* Mantiene proporción 1:1 */
+    max-width: 100%;
 }
 
 .titulo-principal {
     font-family: 'Outright', sans-serif;
     color: #3a5199;
+    font-size: 4.7rem;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 43%; /* Posiciona verticalmente en el centro */
+    left: 50%; /* Posiciona horizontalmente en el centro */
+    transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+}
+
+/* .titulo-principal {
+    font-family: 'Outright', sans-serif;
+    color: #3a5199;
     position: absolute;
     font-size: 5.4rem;
     margin: 0;
-    padding: 200px 870px;
+    padding: 150px 870px;
     text-align: center;
     max-width: 100%;
     max-height: 100vh;
-}
+} */
+
+
 
 .linea {
     display: block;
@@ -549,27 +575,90 @@ header {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 90%; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .hexagono {
+        max-width: 80%; /* Reduce el tamaño del hexágono */
+        max-height: 80vh; /* Ajusta la altura del hexágono */
+    }
 
     .titulo-principal {
-        font-size: 5rem;
-        padding: 130px 300px;
+        font-size: 3.4rem; /* Reduce el tamaño del título */
+        top: 43%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%);
     }
 
-    .carousel {
-        max-width: 100%;
+    .section-banner {
+        margin: 0 1rem; /* Añade un margen para evitar que el contenido toque los bordes */
     }
 
-    /* .section-info, .section-tarjeta, .section-dresscode, .section-tips, .section-regalos, .section-confirmar, .section-conteo */
+    .section-date h1 {
+        font-size: 6rem
+    }
 
-    .button {
+    .section-date h2 {
+        font-size: 4rem;
+    }
+
+    .section-date p {
         font-size: 3rem;
     }
 
-    .countdown-container {
-        flex-direction: column;
+    .section-frase p {
+        font-size: 3rem; /* Ajusta el tamaño de las frases */
+        line-height: 1;
     }
-}
 
-@media (min-width: 769px) {
+    .btn-calendar, 
+    .button, 
+    .buttonR {
+        font-size: 1.5rem; /* Reduce el tamaño de los botones */
+        padding: 0.5rem 1rem; /* Ajusta el padding */
+    }
+
+    .section-info h2,  
+    .section-tips h2,
+    .section-tarjeta h2, 
+    .section-regalos h2,
+    .section-dresscode h2,
+    .section-confirmar h2,
+    .section-conteo h2 {
+        margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
+        font-size: 3rem;
+    }
+
+    .section-info p,  
+    .section-tips p,
+    .section-tarjeta p, 
+    .section-regalos p,
+    .section-dresscode p,
+    .section-dresscode span,
+    .section-confirmar p {
+        margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
+        font-size: 2rem;
+    }
+
+    .image-container {
+        width: 150px; /* Reduce el tamaño de las imágenes */
+        height: 150px;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem; /* Ajusta el tamaño de los botones de carrusel */
+        padding: 0.3rem 0.8rem;
+    }
     
+    .countdown-text span:first-child {
+        font-size: 40px; /* Tamaño del número */
+        font-weight: bold;
+    }
+    
+    .countdown-text span:last-child {
+        font-size: 20px; /* Tamaño del texto del tiempo */
+        font-weight: normal;
+    }
+
 }
