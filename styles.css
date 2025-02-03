@@ -669,6 +669,13 @@ header {
         font-size: 1rem;
     }
 
+    .overlay img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(58, 81, 153, 0.9);
+    }
+
     .hexagono-1 {
         display: inline;
         padding: 0;
