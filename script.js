@@ -61,11 +61,3 @@ function changeSlide(direction) {
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
-
-// Toggle FAQ answers
-document.querySelectorAll('.faq-item h3').forEach((header) => {
-    header.addEventListener('click', () => {
-        const answer = header.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    });
-});
