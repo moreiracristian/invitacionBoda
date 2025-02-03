@@ -53,11 +53,20 @@ setInterval(updateCountdown, 1000);
 /***CARRUSEL***/
 /**************/
 
+// let currentSlide = 0;
+
+// function changeSlide(direction) {
+//     const slides = document.querySelector('.carousel-slides');
+//     const totalSlides = slides.children.length;
+//     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+//     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+// }
+
 let currentSlide = 0;
 
 function changeSlide(direction) {
     const slides = document.querySelector('.carousel-slides');
-    const totalSlides = slides.children.length;
+    const totalSlides = document.querySelectorAll('.carousel-slide').length;
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
