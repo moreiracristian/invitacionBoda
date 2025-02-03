@@ -528,8 +528,8 @@ header {
 }
 
 .time-icon {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
     border-radius: 10px; /* Bordes redondeados en la imagen */
 }
@@ -574,9 +574,9 @@ header {
     font-family: 'HelloMissThang', sans-serif;
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 550px) {
     body {
-        font-size: 90%; /* Reduce ligeramente el tamaño del texto */
+        font-size: 100%; /* Reduce ligeramente el tamaño del texto */
     }
 
     .hexagono {
@@ -585,7 +585,7 @@ header {
     }
 
     .titulo-principal {
-        font-size: 3.4rem; /* Reduce el tamaño del título */
+        font-size: 1.8rem; /* Reduce el tamaño del título */
         top: 43%; /* Centra verticalmente */
         left: 50%; /* Centra horizontalmente */
         transform: translate(-50%, -50%);
@@ -595,28 +595,74 @@ header {
         margin: 0 1rem; /* Añade un margen para evitar que el contenido toque los bordes */
     }
 
+    .section-frase p {
+        font-size: 2rem; /* Ajusta el tamaño de las frases */
+        line-height: 1;
+    }
+
+    .section-carousel {
+        text-align: center;
+        margin: 0 10px 50px; 
+        max-width: 100%;
+        max-height: 100vh;
+    }
+
+    .carousel-btn {
+        font-size: 0.5rem; /* Ajusta el tamaño de los botones de carrusel */
+        padding: 0.3rem 0.3rem;
+    }
+
     .section-date h1 {
-        font-size: 6rem
+        font-size: 3rem;
+        line-height: 1;
     }
 
     .section-date h2 {
-        font-size: 4rem;
+        font-size: 2.9rem;
     }
 
     .section-date p {
-        font-size: 3rem;
-    }
-
-    .section-frase p {
-        font-size: 3rem; /* Ajusta el tamaño de las frases */
-        line-height: 1;
+        font-size: 1.8rem;
+        margin: 1rem auto;
     }
 
     .btn-calendar, 
     .button, 
     .buttonR {
-        font-size: 1.5rem; /* Reduce el tamaño de los botones */
-        padding: 0.5rem 1rem; /* Ajusta el padding */
+        font-size: 1.3rem; /* Reduce el tamaño de los botones */
+        padding: auto 1rem; /* Ajusta el padding */
+        margin-bottom: 30px;
+    }
+
+    .linea {
+        display: block;
+        margin: 30px auto;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .linea-2 {
+        display: inline-block;
+        margin-top: auto;
+        padding: 0;
+        width: 300px;
+        height: auto;
+    }
+    
+    .elementos {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 0;
+        width: 200px;
+        height: auto;
+    }
+
+    .copas {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 0;
+        width: 140px;
+        height: auto;
     }
 
     .section-info h2,  
@@ -627,7 +673,8 @@ header {
     .section-confirmar h2,
     .section-conteo h2 {
         margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
-        font-size: 3rem;
+        font-size: 2rem;
+        line-height: 1;
     }
 
     .section-info p,  
@@ -635,30 +682,68 @@ header {
     .section-tarjeta p, 
     .section-regalos p,
     .section-dresscode p,
-    .section-dresscode span,
     .section-confirmar p {
         margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+
+    .section-dresscode p span {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .hexagono-1 {
+        display: inline;
+        padding: 0;
+        width: 20px; /* Define el ancho */
+        height: auto; /* Mantiene la proporción */
+        vertical-align: middle;
+    }
+
+    .section-conteo  {
+        text-align: center;
+        margin: 0;
+        padding: auto;
+    }
+
+    .countdown-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; 
+        text-align: center;
+    }
+
+    .time-item {
+        width: 45%;
     }
 
     .image-container {
-        width: 150px; /* Reduce el tamaño de las imágenes */
-        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px; 
+        height: 100px; 
     }
 
-    .carousel-btn {
-        font-size: 1.5rem; /* Ajusta el tamaño de los botones de carrusel */
-        padding: 0.3rem 0.8rem;
+    .time-icon {
+        width: 100px;
+        height: auto;
     }
     
     .countdown-text span:first-child {
-        font-size: 40px; /* Tamaño del número */
+        font-size: 30px; /* Tamaño del número */
         font-weight: bold;
     }
     
     .countdown-text span:last-child {
-        font-size: 20px; /* Tamaño del texto del tiempo */
+        font-size: 13px; /* Tamaño del texto del tiempo */
         font-weight: normal;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 5px;
     }
 
 }
