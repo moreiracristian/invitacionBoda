@@ -76,7 +76,7 @@ header {
 .titulo-principal {
     font-family: 'Outright', sans-serif;
     color: #3a5199;
-    font-size: 7rem;
+    font-size: 6rem;
     text-align: center;
     margin: 0;
     position: absolute;
@@ -249,8 +249,8 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(180, 180, 180, 0.7);
-    color: #3a5199;
+    background-color: rgba(180, 180, 180, 0.8);
+    /* color: #3a5199; */
     border: none;
     padding: 0.8rem 0.7rem;
     cursor: pointer;
@@ -259,7 +259,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.8; /* Botones visibles pero no molestos */
+    opacity: 0.3; /* Botones visibles pero no molestos */
     transition: opacity 0.1s ease-in-out;
 }
 
@@ -285,12 +285,13 @@ header {
     font-size: 10rem;
     margin-top: 10px;
     letter-spacing: 10px;
-    color: #b4b4b4;
+    color: #3a5199;
 }
 
 .section-date h2 {
     font-family: 'Lovan', sans-serif;
     font-size: 6rem;
+    color: #b4b4b4;
 }
 
 .section-date p {
@@ -625,17 +626,14 @@ header {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 550px) {
-    body {
-        font-size: 100%; /* Reduce ligeramente el tamaño del texto */
-    }
-
+    
     .hexagono {
         max-width: 80%; /* Reduce el tamaño del hexágono */
         max-height: 80vh; /* Ajusta la altura del hexágono */
     }
 
     .titulo-principal {
-        font-size: 2rem; /* Reduce el tamaño del título */
+        font-size: 2.1rem; /* Reduce el tamaño del título */
         top: 43%; /* Centra verticalmente */
         left: 50%; /* Centra horizontalmente */
         transform: translate(-50%, -50%);
@@ -663,16 +661,18 @@ header {
     }
 
     .section-date h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
         line-height: 1;
+        color: #3a5199;
     }
 
     .section-date h2 {
-        font-size: 2.9rem;
+        font-size: 2.7rem;
+        color: #2f2e33;
     }
 
     .section-date p {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         margin: 1rem auto;
     }
 
