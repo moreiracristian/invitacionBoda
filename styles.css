@@ -227,7 +227,7 @@ header {
 
 .section-date h2 {
     font-family: 'Lovan', sans-serif;
-    font-size: 6rem;
+    font-size: 9rem;
     color: #b4b4b4;
 }
 
@@ -235,6 +235,7 @@ header {
     font-family: 'Qhairo', sans-serif;
     font-size: 4rem;
     margin-bottom: 80px;
+    color: #2f2e33;
 }
 
 .btn-calendar {
@@ -540,12 +541,12 @@ header {
 }
 
 .countdown-text span:first-child {
-    font-size: 50px; /* Tamaño del número */
+    font-size: 60px; /* Tamaño del número */
     font-weight: bold;
 }
 
 .countdown-text span:last-child {
-    font-size: 40px; /* Tamaño del texto del tiempo */
+    font-size: 30px; /* Tamaño del texto del tiempo */
     font-weight: normal;
 }
 
@@ -610,12 +611,13 @@ header {
 
     .section-date h2 {
         font-size: 2.7rem;
-        color: #2f2e33;
+        color: #b4b4b4;
     }
 
     .section-date p {
         font-size: 1.7rem;
         margin: 1rem auto;
+        color: #2f2e33;
     }
 
     .btn-calendar, 
@@ -707,9 +709,9 @@ header {
 
     .countdown-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 10px; 
+        gap: 5px; 
         text-align: center;
     }
 
@@ -721,7 +723,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100px; 
+        width: 95px; 
         height: 100px; 
     }
 
