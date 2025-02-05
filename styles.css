@@ -546,7 +546,7 @@ header {
 }
 
 .countdown-text span:first-child {
-    font-size: 60px; /* Tamaño del número */
+    font-size: 75px; /* Tamaño del número */
     font-weight: bold;
 }
 
@@ -729,8 +729,8 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100px;
-        height: auto; 
+        width: auto;
+        height: 170px; 
     }
 
     .time-icon {
@@ -791,19 +791,19 @@ header {
     }
 
     .section-date h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
         line-height: 1;
         color: #3a5199;
     }
 
     .section-date h2 {
-        font-size: 2.7rem;
+        font-size: 4rem;
         color: #b4b4b4;
     }
 
     .section-date p {
-        font-size: 1.7rem;
-        margin: 1rem auto;
+        font-size: 2rem;
+        margin: 1rem 2rem;
         color: #2f2e33;
     }
 
@@ -911,7 +911,7 @@ header {
         flex-direction: column;
         align-items: center;
         width: 85px; 
-        height: auto; 
+        height: 120px; 
     }
 
     .time-icon {
@@ -920,7 +920,7 @@ header {
     }
     
     .countdown-text span:first-child {
-        font-size: 27px; /* Tamaño del número */
+        font-size: 30px; /* Tamaño del número */
         font-weight: bold;
     }
     
