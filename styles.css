@@ -279,6 +279,10 @@ header {
 /***************/
 
 
+.section-tarjeta {
+    margin-bottom: 30px;
+}
+
 .section-tarjeta h2 {
     font-family: 'Lovan', sans-serif;
     font-size: 3.5rem;
@@ -296,12 +300,12 @@ header {
 .button {
     display: inline-block;
     padding: 0.5rem 1rem;
+    margin-bottom: 30px;
     color: #ffffff;
     background: #3a5199;
     border-radius: 5px;
     font-size: 2.5rem;
     font-family: 'HelloMissThang', sans-serif;
-    margin-bottom: 70px;
 }
 
 .button:hover {
@@ -330,6 +334,10 @@ header {
 /******************/
 
 
+.section-dresscode {
+    margin-bottom: 50px;
+}
+
 .section-dresscode h2 {
     font-family: 'Lovan', sans-serif;
     font-size: 3.5rem;
@@ -357,6 +365,9 @@ header {
 /**************/
 
 
+.section-tips {
+    margin-top: 50px;
+}
 .section-tips h2 {
     font-family: 'Lovan', sans-serif;
     font-size: 3.5rem;
@@ -385,6 +396,10 @@ header {
 /****REGALOS****/
 /***************/
 
+
+.section-regalos {
+    margin-bottom: 30px;
+}
 
 .section-regalos h2 {
     font-family: 'Lovan', sans-serif;
@@ -524,6 +539,7 @@ header {
     height: 90%;
     object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
     border-radius: 10px; /* Bordes redondeados en la imagen */
+    margin-top: 20px; /* Añade espacio entre la imagen y el texto */
 }
 
 .countdown-text {
@@ -568,6 +584,186 @@ header {
     font-family: 'HelloMissThang', sans-serif;
 }
 
+@media only screen and (min-width: 551px) and (max-width: 1199px) {
+    
+    .hexagono {
+        max-width: 80%; /* Reduce el tamaño del hexágono */
+        max-height: 80vh; /* Ajusta la altura del hexágono */
+    }
+
+    .titulo-principal {
+        font-size: 4rem; /* Reduce el tamaño del título */
+        top: 43%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%);
+    }
+
+    .section-banner {
+        margin: 0 1rem; /* Añade un margen para evitar que el contenido toque los bordes */
+    }
+
+    .section-frase p {
+        font-size: 3rem; /* Ajusta el tamaño de las frases */
+        line-height: 1;
+    }
+
+    .section-carousel {
+        text-align: center;
+        margin: 0 10px 50px; 
+        max-width: 100%;
+        max-height: 100vh;
+    }
+
+    .carousel-btn {
+        font-size: 1rem; /* Ajusta el tamaño de los botones de carrusel */
+        padding: 0.3rem 0.3rem;
+    }
+
+    .section-date h1 {
+        font-size: 6rem;
+        line-height: 1;
+        color: #3a5199;
+    }
+
+    .section-date h2 {
+        font-size: 6rem;
+        color: #b4b4b4;
+    }
+
+    .section-date p {
+        font-size: 3rem;
+        margin: 2.5rem auto;
+        color: #2f2e33;
+    }
+
+    .btn-calendar, 
+    .button, 
+    .buttonR {
+        font-size: 2rem; /* Reduce el tamaño de los botones */
+        padding: auto 1rem; /* Ajusta el padding */
+        margin-bottom: 30px;
+    }
+
+    .linea {
+        display: block;
+        margin: 30px auto;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .linea-2 {
+        display: inline-block;
+        margin-top: auto;
+        padding: 0;
+        width: 400px;
+        height: auto;
+    }
+    
+    .elementos {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 0;
+        width: 250px;
+        height: auto;
+    }
+
+    .copas {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 0;
+        width: 185px;
+        height: auto;
+    }
+
+    .section-info h2,  
+    .section-tips h2,
+    .section-tarjeta h2, 
+    .section-regalos h2,
+    .section-dresscode h2,
+    .section-confirmar h2,
+    .section-conteo h2 {
+        margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .section-info p,  
+    .section-tips p,
+    .section-tarjeta p, 
+    .section-regalos p,
+    .section-dresscode p,
+    .section-confirmar p {
+        margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
+        font-size: 1.5rem;
+    }
+
+    .section-dresscode p span {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .overlay img {
+        max-width: 75%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(58, 81, 153, 0.9);
+    }
+
+    .hexagono-1 {
+        display: inline;
+        padding: 0;
+        width: 30px; /* Define el ancho */
+        height: auto; /* Mantiene la proporción */
+        vertical-align: middle;
+    }
+
+    .section-conteo  {
+        text-align: center;
+        margin: 0;
+        padding: 0px 10px 30px;
+    }
+
+    .countdown-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px; 
+        text-align: center;
+    }
+
+    .time-item {
+        width: 50%;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        height: auto; 
+    }
+
+    .time-icon {
+        width: 150px;
+        height: auto;
+    }
+    
+    .countdown-text span:first-child {
+        font-size: 45px; /* Tamaño del número */
+        font-weight: bold;
+    }
+    
+    .countdown-text span:last-child {
+        font-size: 20px; /* Tamaño del texto del tiempo */
+        font-weight: normal;
+    }
+
+    .footer {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 550px) {
     
     .hexagono {
@@ -604,7 +800,7 @@ header {
     }
 
     .section-date h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         line-height: 1;
         color: #3a5199;
     }
@@ -704,7 +900,7 @@ header {
     .section-conteo  {
         text-align: center;
         margin: 0;
-        padding: auto;
+        padding: 0px 10px 20px;
     }
 
     .countdown-container {
@@ -723,22 +919,22 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 95px; 
-        height: 100px; 
+        width: 85px; 
+        height: auto; 
     }
 
     .time-icon {
-        width: 100px;
+        width: 95px;
         height: auto;
     }
     
     .countdown-text span:first-child {
-        font-size: 30px; /* Tamaño del número */
+        font-size: 27px; /* Tamaño del número */
         font-weight: bold;
     }
     
     .countdown-text span:last-child {
-        font-size: 13px; /* Tamaño del texto del tiempo */
+        font-size: 11px; /* Tamaño del texto del tiempo */
         font-weight: normal;
     }
 
