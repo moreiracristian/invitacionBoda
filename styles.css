@@ -774,6 +774,7 @@ header {
 
     .section-frase p {
         font-size: 2rem; /* Ajusta el tamaño de las frases */
+        margin: 0 1rem;
         line-height: 1;
     }
 
@@ -852,7 +853,7 @@ header {
     .section-dresscode h2,
     .section-confirmar h2,
     .section-conteo h2 {
-        margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
+        margin: 1rem 2rem; /* Ajusta el margen para mantener un buen espaciado */
         font-size: 2rem;
         line-height: 1;
     }
@@ -863,7 +864,7 @@ header {
     .section-regalos p,
     .section-dresscode p,
     .section-confirmar p {
-        margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
+        margin: 1rem 2rem; /* Ajusta el margen para mantener un buen espaciado */
         font-size: 1rem;
     }
 
