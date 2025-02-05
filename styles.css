@@ -241,7 +241,7 @@ header {
 .btn-calendar {
     display: inline-block;
     margin-bottom: 80px;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background-color: #3a5199;
     color: white;
     border-radius: 5px;
@@ -257,7 +257,6 @@ header {
 /**************/
 /*****INFO*****/
 /**************/
-
 
 .section-info h2 {
     font-family: 'Lovan', sans-serif;
@@ -279,10 +278,6 @@ header {
 /***************/
 
 
-.section-tarjeta {
-    margin-bottom: 30px;
-}
-
 .section-tarjeta h2 {
     font-family: 'Lovan', sans-serif;
     font-size: 3.5rem;
@@ -293,14 +288,13 @@ header {
 .section-tarjeta p {
     font-family: 'Qhairo', sans-serif;
     font-size: 2rem;
-    margin: 1.5rem 10rem;
+    margin: 1.5rem 15rem;
     color: #2f2e33;
 }
 
 .button {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-bottom: 30px;
+    padding: 1rem 2rem;
     color: #ffffff;
     background: #3a5199;
     border-radius: 5px;
@@ -314,8 +308,7 @@ header {
 
 .buttonR {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     color: #ffffff;
     background: #3a5199;
     text-decoration: none;
@@ -348,7 +341,7 @@ header {
 .section-dresscode p {
     font-family: 'Qhairo', sans-serif;
     font-size: 2rem;
-    margin: 1.5rem 10rem;
+    margin: 1.5rem 15rem;
     color: #2f2e33;
 }
 
@@ -378,7 +371,7 @@ header {
 .section-tips p {
     font-family: 'Qhairo', sans-serif;
     font-size: 2rem;
-    margin: 1.5rem 10rem;
+    margin: 1.5rem 15rem;
     color: #2f2e33;
     text-align: left;
 }
@@ -397,10 +390,6 @@ header {
 /***************/
 
 
-.section-regalos {
-    margin-bottom: 30px;
-}
-
 .section-regalos h2 {
     font-family: 'Lovan', sans-serif;
     font-size: 3.5rem;
@@ -411,7 +400,7 @@ header {
 .section-regalos p {
     font-family: 'Qhairo', sans-serif;
     font-size: 2rem;
-    margin: 1.5rem 10rem;
+    margin: 1.5rem 15rem;
     color: #2f2e33;
 }
 
@@ -431,7 +420,7 @@ header {
 .section-confirmar p {
     font-family: 'Qhairo', sans-serif;
     font-size: 2rem;
-    margin: 1.5rem 10rem;
+    margin: 1.5rem 15rem;
     color: #2f2e33;
 }
 
@@ -640,8 +629,8 @@ header {
     .button, 
     .buttonR {
         font-size: 2rem; /* Reduce el tamaño de los botones */
-        padding: auto 1rem; /* Ajusta el padding */
-        margin-bottom: 30px;
+        padding: 1rem 2rem; /* Ajusta el padding */
+        margin: 1rem 2rem 2rem;
     }
 
     .linea {
@@ -695,6 +684,7 @@ header {
     .section-confirmar p {
         margin: 1rem; /* Ajusta el margen para mantener un buen espaciado */
         font-size: 1.5rem;
+        margin: 0.5rem 4rem;
     }
 
     .section-dresscode p span {
