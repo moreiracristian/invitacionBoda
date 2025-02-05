@@ -9,7 +9,7 @@ const endDateString = endDate.toISOString().replace(/[-:]/g, '').split('.')[0];
 const calendarURL = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
     `&text=Boda%20Eli%26Cris` +
     `&dates=${startDate}/${endDateString}` +
-    `&details=Agendá%20nuestra%20fecha%20especial%20para%20festejar%20juntos.%20Eli&Cris` +
+    `&details=SAVE%20THE%20DATE%20para%20festejar%20juntos.%20EliyCris.%20Auspicia%20ig%20@tienda.elitian%20jaja` +
     `&location=` +
     `&sf=true&output=xml`;
 
